@@ -69,7 +69,7 @@ In the following section, we'll outline some basic tips for using Sass, using ex
 
 <h5>For example:</h5>
 
-<p><i>
+<pre><i>
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
 
@@ -84,7 +84,7 @@ body {
   font: 100% Helvetica, sans-serif;
   color: #333;
 }
-</i></p>
+</i></pre>
 
 <h3>Nesting</h3>
 
@@ -92,7 +92,7 @@ body {
 
 The following shows a basic navigation style that uses nesting:<br>
 
-<i>nav {
+<pre><i>nav {
   ul {
     margin: 0;
     padding: 0;
@@ -107,7 +107,7 @@ The following shows a basic navigation style that uses nesting:<br>
     text-decoration: none;
   }
 }</i>
-</p>
+</pre>
 
 <h4>The CSS output is as follows:</h4>
 
@@ -136,7 +136,7 @@ Import
 
 Used with Partials (see previous section), the @import directive allows you to import your partial files into the current file, to build one single CSS file. Be mindful of how many imports you're using as an HTTP request will be generated for each one. </p><br>
 
-<p><i>
+<pre><i>
 // _reset.scss
 
 html,
@@ -168,7 +168,7 @@ body {
   background-color: #efefef;
 }
 
-Note: When importing partials, you don't need to include the file extension or the underscore. </i></p>
+Note: When importing partials, you don't need to include the file extension or the underscore. </i></pre>
 
 <h3>Mixins</h3>
 
@@ -176,14 +176,14 @@ Note: When importing partials, you don't need to include the file extension or t
 
 For example, if you need to include the vendor prefixes, you can use a mixin instead. Take a look at this example for border-radius: <br>
 
-<i> @mixin border-radius($radius) {
+<pre><i> @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
 
-.box { @include border-radius(10px); } </i>
+.box { @include border-radius(10px); } </i></pre>
 
 Notice the @mixin directive at the top. It has been given the name border-radius and uses the variable $radius as its parameter. This variable is used to set the radius value for each element. 
 
@@ -191,14 +191,14 @@ Later, the @include directive is called, along with the mixin name (border-radiu
 
 <h5>The following CSS is produced:</h5> <br>
 
-<p><i>
+<pre><i>
 .box {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   border-radius: 10px;
 }
-</i></p>
+</i></pre>
 
 <h3>Extend/Inheritance</h3>
 
