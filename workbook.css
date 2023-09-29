@@ -1,5 +1,6 @@
 body{
-  background-color: lightblue;
+/*   background-color: lightblue; */
+  background-image: linear-gradient(180deg, red, blue);
 }
 h1 {
   color: white;
